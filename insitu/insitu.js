@@ -33,7 +33,7 @@
 				document.write("r="+r+"&nbsp");
 				document.write("</br>");
 				document.write("P is < than Q </br>");
-				exch(a,r,r+p,q);
+				exch(a,r,r+p,p);
 				r=r+p;
 				q=q-p;
 
