@@ -11,7 +11,8 @@ public boolean isEmpty(){
 
 public void push(String item){
     Node oldFirst = first;
-    first = new Node(); first.item = item;
+    first = new Node();
+    first.item = item;
     first.next = oldFirst;
 
 }
