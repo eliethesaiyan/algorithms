@@ -8,9 +8,6 @@ public class QuickFindUF
             id[i] = 0;
     }
 
-    
-    
-
     public void union(int p, int q){
         int pid  = id[p];
         int qid = id[q];
@@ -23,14 +20,11 @@ public class QuickFindUF
         System.out.println(i);
 
         }
-
-
     }
 
     public static void main(String[] args){
         QuickFindUF p = new QuickFindUF(2);
         System.out.println(java.util.Arrays.toString(p.id));
-        
         p.union(0,1);
     }
 }

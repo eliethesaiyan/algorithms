@@ -12,6 +12,12 @@ public class ResizingArrayStackOfStrings {
         s[N++] = item;
     }
 
+    public String pop(){
+        item = s[N--];
+        s[N] = null;
+        return item;
+    }
+
     public void resize(int capacity){
         String[] copy = new String[capacity];
         for (int i=0; i < N; i++) copy[i] = s[i];
