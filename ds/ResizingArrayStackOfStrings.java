@@ -8,14 +8,8 @@ public class ResizingArrayStackOfStrings {
     }
 
     public void push(String item){
-        if(N == s.length) resize(2 * s.length);
+        if(N == s.length / 4 ) resize(2 * s.length / 2);
         s[N++] = item;
-    }
-
-    public String pop(){
-        item = s[N--];
-        s[N] = null;
-        return item;
     }
 
     public void resize(int capacity){
