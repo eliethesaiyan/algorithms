@@ -3,14 +3,15 @@ import java.util.Arrays;
 
 import edu.princeton.cs.algs4.StdOut;;
 public class ThreeSumN2LogN {
-    private int[] N;
+    //private int[] N;
+    private int[] N = {30, -40, -20, -10, 40, 0, 10, 5};
     public ThreeSumN2LogN(int capacity){
-        N = new int[capacity];
-        for(int i = -(capacity - 1) / 2 ; i < capacity / 2; i++){
+        /**N = new int[capacity];
+        for(int i = -(capacity) / 2 ; i <= capacity / 2; i++){
            StdOut.println(i);
            N[i + (capacity / 2)] = i;
         }
-             
+           **/  
         Arrays.sort(N);
         int i = 0;
         while(i < N.length){
@@ -26,15 +27,18 @@ public class ThreeSumN2LogN {
         int count = 0;
         for(int i=0; i < N.length; i++){
             for(int j=i+1; j< N.length; j++){
-                StdOut.print("i: " + i);
-                if (N[i]+N[j] == N[bisearch(i)])
+                /**StdOut.print("i: " + i);**/
+                if(bisearch(-(N[i]+N[j]))!= -1){
+                if (N[bisearch(-(N[i]+N[j]))] == N[i] ){
                      count++;
                 } 
+            }
     } 
+}
+
     return count; }
 
     public int bisearch(int item){
-    StdOut.println("search item "+ item);
     int highIndex = N.length - 1 ;
     int lowIndex = 0;
 
@@ -57,6 +61,7 @@ public class ThreeSumN2LogN {
         StdOut.println(highIndex);
 
     }
+    StdOut.println("no match found for "+ (item));
     return -1;
 }
 
